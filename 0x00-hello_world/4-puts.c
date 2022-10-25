@@ -1,19 +1,14 @@
 #include <stdio.h>
+
 /**
- * main _Entry point
+ * main - Entry point
  *
- * Description: 'printing using puts'
- *
- * Return: Always 0 (success)
+ * Return: Always 0 (SUccess)
  */
-
-int main(void)
+int main(void) /*Hello*/
 {
-	/*The main function to print using puts*/
 	char mystring[] = "\"Programming is like building a multilingual puzzle";
-
+	/*puts*/
 	puts(mystring);
 	return (0);
 }
-
-
