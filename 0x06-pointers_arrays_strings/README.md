@@ -1,3 +1,6 @@
 Please read me!
-How to cancatenate two strings
-This through a function
+Contents: 
+1. strcat
+2. strncat
+3. strncpy (current)
+These are functions!!
