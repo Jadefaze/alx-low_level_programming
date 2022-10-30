@@ -2,23 +2,25 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main -  positve or negative
- * @n rnadom number
+ * main - Entry point  to determine where a rand is positive or negative
  *
- * Return: zero
+ * Description: print value of n status i.e +v, -ve or zero
+ *
+ * Return: 0 always (success)
  */
 int main(void)
 {
 	int n;
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	/*my code*/
+
+	/*my code */
 	if (n > 0)
 		printf("%i is positive\n", n);
 	else if (n == 0)
 		printf("%i is zero\n", n);
 	else
 		printf("%i is negative\n", n);
-
 	return (0);
 }
