@@ -9,14 +9,17 @@
 int main(void)
 {
 	int number = 48; /* decimal rep of 0*/
+	char letter = 'a';
 
-	while (number <= 192) /*102 is the decimal rep of f */
+	while (number <= 57) /*102 is the decimal rep of f */
 	{
 		putchar(number);
-		/*after 9 we jump till 96 */
-		if (number == 57)
-			number += 39;
 		++number;
+	}
+	while (letter <= 'f')
+	{
+		putchar(letter);
+		++letter;
 	}
 	putchar('\n');
 	return (0);
