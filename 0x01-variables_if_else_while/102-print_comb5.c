@@ -15,11 +15,11 @@ int main(void)
 		for (n = 0; n < 100; n++)
 			if (m < n)
 			{
-				putchar((n / 10) + 48);
-				putchar((n % 10) + 48);
-				putchar(' ');
 				putchar((m / 10) + 48);
 				putchar((m % 10) + 48);
+				putchar(' ');
+				putchar((n / 10) + 48);
+				putchar((n % 10) + 48);
 				if (m != 98 || n != 99)
 				{
 					putchar(',');
