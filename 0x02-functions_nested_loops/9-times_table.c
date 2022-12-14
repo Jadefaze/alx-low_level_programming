@@ -13,13 +13,13 @@ void times_table(void)
 	for (i = 0; i <= 9; ++i)
 	{
 		_putchar(48);
-		for ( j = 1; j <= 9; ++j)
+		for (j = 1; j <= 9; ++j)
 		{
 			_putchar(',');
 			_putchar(' ');
 
 			multi = i * j;
-			
+
 			/*
 			 * put space if mulit is single number
 			 * place the first digit if its two numbers or more
@@ -27,7 +27,7 @@ void times_table(void)
 			if (multi <= 9)
 				_putchar(' ');
 			else
-				_putchar((multi /10) + 48); /*get first digit */
+				_putchar((multi / 10) + 48); /*get first digit */
 			_putchar((multi % 10) + 48); /* get second digit */
 		}
 		_putchar('\n');
