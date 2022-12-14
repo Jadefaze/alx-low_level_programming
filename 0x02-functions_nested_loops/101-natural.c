@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * natural - the func
+ * main - the func
  *
  * Description: to do ..
  *
