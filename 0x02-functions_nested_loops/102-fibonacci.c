@@ -2,26 +2,29 @@
 
 /**
  * main - entry point
- * 
+ *
  * Description: to print fibonacci numbers
  *
  * Return: anything
  */
 int main(void)
 {
-	int x0 = 1, x1 = 2, x2;
-	int count = 2;
-
-	printf("%d, %d, ", x0, x1);
-	while (count <= 50)
+	int n;
+	unsigned long fib1 = 0, fib2 = 1, sum;
+	for (n = 0; n < 50; n++)
 	{
-		x2 = x0 + x1;
-		printf("%d, ", x2);
-		x0 = x1;
-		x1 = x2;
-		count += 1;
+		sum = fib1 + fib2;
+
+		printf("%lu", sum);
+		fib1 = fib2;
+		fib2 = sum;
+
+		if (n == 49)
+			printf("\n");
+		else
+			printf(", ");
 	}
-	printf("\n");
+	return (0);
 }
 
 
