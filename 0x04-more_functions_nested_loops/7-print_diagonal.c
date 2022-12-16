@@ -19,7 +19,7 @@ void print_diagonal(int n)
 		{
 			for (spacing = 1; spacing <= position; ++spacing)
 				_putchar(' ');
-			_putchar('\\');
+			_putchar(92);/*backlash equaivalent*/
 			_putchar('\n');
 		}
 	}
