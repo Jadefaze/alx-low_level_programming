@@ -10,6 +10,7 @@ void print_rev(char *s)
 {
 	/* get the las inde before null */
 	int index;
+
 	for (index = 0; s[index] != '\0'; ++index)
 		;
 	/*print the chars from last to first*/
