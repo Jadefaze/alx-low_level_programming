@@ -1,5 +1,5 @@
 /**
- * swamp_int - to interchange two ints
+ * swap_int - to interchange two ints
  * @a: the first integer
  * @b: the second integer
  *
