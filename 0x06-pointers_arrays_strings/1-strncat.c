@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * main - to copy a string
+ * _strncat - to copy a string
  *
  * @dest: input value
- * @scr: input value
+ * @src: input value
  * @n: input value
  *
- * Return: Always 0.
+ * Return: dest
  */
 char *_strncat(char *dest, char *src, int n)
 {
