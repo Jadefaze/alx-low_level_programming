@@ -1,13 +1,13 @@
-<h1>0x08. C - Recursion </h1>
+<h1> 0x08. C - Recursion </h1>
 <h2> Resources </h2>
 <p><strong>Read or watch</strong>:</p>
 
 <ul>
-<li><a href="/rltoken/dzZB83Hm3lO7dScjhebAxw" title="0x08. Recursion, introduction" target="_blank">0x08. Recursion, introduction</a></li>
-<li><a href="/rltoken/xYjKl3024oN58Bi_621_vQ" title="What on Earth is Recursion?" target="_blank">What on Earth is Recursion?</a> </li>
-<li><a href="/rltoken/u4ojc5CZpf4qiuQvmXCiOA" title="C - Recursion" target="_blank">C - Recursion</a> </li>
-<li><a href="/rltoken/Wv-wffgpXelN9ZTrbmiOyA" title="C Programming Tutorial 85, Recursion pt.1" target="_blank">C Programming Tutorial 85, Recursion pt.1</a> </li>
-<li><a href="/rltoken/7GVdI-KT-M1vOIzwEjSahQ" title="C Programming Tutorial 86, Recursion pt.2" target="_blank">C Programming Tutorial 86, Recursion pt.2</a> </li>
+<li><a href="https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/misc/2021/1/2818ba6f14f644b871dcbd746925fa15b8cd5937.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230104%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230104T203220Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=ce1f80c0f883556de0c3f92a1a96b0befb9a964efe0f568f048efed156664aec" title="0x08. Recursion, introduction" target="_blank">0x08. Recursion, introduction</a></li>
+<li><a href="https://www.youtube.com/watch?v=Mv9NEXX1VHc" title="What on Earth is Recursion?" target="_blank">What on Earth is Recursion?</a> </li>
+<li><a href="https://www.tutorialspoint.com/cprogramming/c_recursion.htm" title="C - Recursion" target="_blank">C - Recursion</a> </li>
+<li><a href="https://www.youtube.com/watch?v=XGxbXMP6k8k" title="C Programming Tutorial 85, Recursion pt.1" target="_blank">C Programming Tutorial 85, Recursion pt.1</a> </li>
+<li><a href="https://www.youtube.com/watch?v=7XiIS6HobNs" title="C Programming Tutorial 86, Recursion pt.2" target="_blank">C Programming Tutorial 86, Recursion pt.2</a> </li>
 </ul>
 
 <h2>Learning Objectives</h2>
