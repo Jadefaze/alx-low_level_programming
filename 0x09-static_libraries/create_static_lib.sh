@@ -4,5 +4,5 @@
 #in the current directory
 
 gcc -c *.c
-ar arc liball.a *.o
-echo y | rm -I *.o
+ar rcs liball.a *.o
+rm *.o
