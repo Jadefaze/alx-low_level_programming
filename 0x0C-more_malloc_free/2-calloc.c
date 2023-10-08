@@ -24,7 +24,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	while (i < total_size)
 	{
-		*((int *)array_alloc + i) = 0;
+		*((char *)array_alloc + i) = 0;
 		i++;
 	}
 
