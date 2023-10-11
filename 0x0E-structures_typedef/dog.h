@@ -1,5 +1,5 @@
-#ifndef DOG
-#define DOG
+#ifndef DOG_H
+#define DOG_H
 
 /**
  * struct dog - to define a new type dog
@@ -16,4 +16,5 @@ typedef struct dog
 	char *owner;
 } dog;
 
-#endif /*DOG*/
+void init_dog(struct dog *d, char *name, float age, char *owner);
+#endif /*DOG_H*/
