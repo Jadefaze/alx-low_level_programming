@@ -16,6 +16,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t bytesRead;
 	ssize_t dataWrite;
 
+	if (filename == NULL)
+		return (0);
+
 	fp = open(filename, O_RDONLY);
 
 	if (!fp)
@@ -27,5 +30,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	free(buf);
 	close(fp);
+
+	if (!dataWrite)
+		return (0);
+
 	return (dataWrite);
 }
