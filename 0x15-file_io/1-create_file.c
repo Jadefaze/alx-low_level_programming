@@ -19,7 +19,7 @@ int create_file(const char *filename, char *text_content)
 	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC);
 
 	if (fd == -1)
-		return (0);
+		return (-1);
 
 	/*find length of the text to be written*/
 	_txtLen = 0;
@@ -31,8 +31,9 @@ int create_file(const char *filename, char *text_content)
 		bytesWritten = write(fd, "", _txtLen);
 		if (bytesWritten == -1)
 		{
+			perror("fails");
 			close(fd);
-			return (0);
+			return (-1);
 		}
 	}
 
@@ -40,10 +41,11 @@ int create_file(const char *filename, char *text_content)
 
 	if (bytesWritten == -1)
 	{
+		perror("fails");
 		close(fd);
-		return (0);
+		return (-1);
 	}
 	close(fd);
 
-	return (bytesWritten);
+	return (1);
 }
