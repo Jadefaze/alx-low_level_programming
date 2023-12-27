@@ -25,7 +25,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 
 	for (i = 0; i < nmemb; i++)
-		*(charPtr + i) = (char)0;
+		*(charPtr + i) = 0;
 
 	return (array_alloc);
 }
