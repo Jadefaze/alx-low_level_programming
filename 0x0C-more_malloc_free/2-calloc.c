@@ -19,10 +19,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 
 	array_alloc = malloc(size * nmemb);
-	charPtr = (char *)array_alloc;
 
 	if (array_alloc == NULL)
 		return (NULL);
+
+	charPtr = (char *)array_alloc;
 
 	for (i = 0; i < nmemb; i++)
 		charPtr[i] = 0;
