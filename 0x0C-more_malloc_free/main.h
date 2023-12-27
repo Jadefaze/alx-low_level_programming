@@ -2,6 +2,7 @@
 #define MAIN_H
 #include <stdlib.h>
 
+void *_memset(char *s, char c, size_t n);
 unsigned int _str_len(char *str);
 void *malloc_checked(unsigned int b);
 char *string_nconcat(char *s1, char *s2, unsigned int n);
