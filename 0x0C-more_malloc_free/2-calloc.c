@@ -10,23 +10,20 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i;
-	void *array_alloc;
-	char *charPtr;
+	char *array_alloc;
 
 	i = 0;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	array_alloc = malloc(size * nmemb);
+	array_alloc = (char *)malloc(size * nmemb);
 
 	if (array_alloc == NULL)
 		return (NULL);
 
-	charPtr = (char *)array_alloc;
-
 	for (i = 0; i < nmemb; i++)
-		charPtr[i] = 0;
+		array_alloc[i] = 0;
 
 	return (array_alloc);
 }
