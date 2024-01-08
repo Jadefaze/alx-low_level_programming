@@ -21,33 +21,33 @@ void print_all(const char * const format, ...)
 	while (format[i])
 	{
 		if (i == format_len - 1)
-			separator = "";
+			separator = "\n";
 		switch (format[i])
 		{
 			case 'c':
 				value_c = va_arg(ap, int);
-				printf("%c", value_c);
-				printf("%s", separator);
+				printf("%c%s", value_c, separator);
 				break;
 			case 'i':
 				value_i = va_arg(ap, int);
-				printf("%i", value_i);
-				printf("%s", separator);
+				printf("%i%s", value_i, separator);
 				break;
 			case 'f':
 				value_f = va_arg(ap, double);
-				printf("%f", value_f);
-				printf("%s", separator);
+				printf("%f%s", value_f, separator);
 				break;
 			case 's':
 				value_s = va_arg(ap, char*);
-				printf("%s", value_s);
-				printf("%s", separator);
+				if (value_s == NULL)
+				{
+					printf("%s%s", "(nil)", separator);
+					break;
+				}
+				printf("%s%s", value_s, separator);
 				break;
 		}
 		i++;
 	}
-	printf("\n");
 }
 
 /**
