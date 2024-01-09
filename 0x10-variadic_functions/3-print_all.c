@@ -9,60 +9,97 @@
 
 void print_all(const char * const format, ...)
 {
+	int i, index;
 	va_list ap;
-	float value_f;
-	char *value_s, *separator, value_c;
-	int format_len, i, value_i;
+	char *separator;
+	format_t formats[] = {
+		{'c', print_char},
+		{'i', print_int},
+		{'f', print_float},
+		{'s', print_str},
+		{'\0', NULL}
+	};
+
+	separator = "";
+	i = 0;
 
 	va_start(ap, format);
-	format_len = str_len(format);
-	separator = ", ";
-	i = 0;
-	while (format[i])
+
+	while (format && format[i])
 	{
-		if (i == format_len - 1)
-			separator = "\n";
-		switch (format[i])
+		index = 0;
+
+		while (index < 4 && (format[i] != formats[index].c))
+			index++;
+
+		if (index < 4)
 		{
-			case 'c':
-				value_c = va_arg(ap, int);
-				printf("%c%s", value_c, separator);
-				break;
-			case 'i':
-				value_i = va_arg(ap, int);
-				printf("%i%s", value_i, separator);
-				break;
-			case 'f':
-				value_f = va_arg(ap, double);
-				printf("%f%s", value_f, separator);
-				break;
-			case 's':
-				value_s = va_arg(ap, char*);
-				if (value_s == NULL)
-				{
-					printf("%s%s", "(nil)", separator);
-					break;
-				}
-				printf("%s%s", value_s, separator);
-				break;
+			printf("%s", separator);
+			formats[index].print(ap);
+			separator = ", ";
 		}
 		i++;
 	}
 	va_end(ap);
+	printf("\n");
 }
 
 /**
- * str_len - find string length
- * @str: the string
- * Return: length
+ * print_char - to print char types in formatted printing
+ * @arg: the va_list argument (unsupplied args)
+ * Return: nothing
  */
 
-int str_len(const char *str)
+void print_char(va_list arg)
+{
+	char c;
+
+	c = va_arg(arg, int);
+	printf("%c", c);
+}
+/**
+ * print_int - to print int types in formatted printing
+ * @arg: varaible argument from va_list
+ * Return: nothing
+ */
+
+void print_int(va_list arg)
 {
 	int i;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	i = va_arg(arg, int);
+	printf("%d", i);
+}
+
+/**
+ * print_float - to print double types in formatted printing
+ * @arg: the variadic arg (from va_list)
+ * Return: nothing
+ */
+
+void print_float(va_list arg)
+{
+	float f;
+
+	f = va_arg(arg, double);
+	printf("%f", f);
+}
+
+/**
+ * print_str - to print string types in formatted printing
+ * @arg: va_list arg
+ * Return: nothing
+ */
+
+void print_str(va_list arg)
+{
+	char *str;
+
+	str = va_arg(arg, char*);
+	if (str == NULL)
+	{
+		printf("%s", "(nil)");
+		return;
+	}
+	printf("%s", str);
 }
